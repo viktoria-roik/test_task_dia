@@ -2,11 +2,18 @@
   --gray-primary-color: #313237;
   --gray-secondary-color: #89939a;
   --gray-icons-placeholders-color: #b4bdc3;
-  --gray-elements-color: #e2e6e9;
+  /* --gray-elements-color: #e2e6e9; */
   --gray-background-color: #fafbfc;
   --white-color: #fff;
   --green-color: #27ae60;
   --red-color: #eb5757;
+
+  --purple-primary-color: #665cd1;
+  --purple-secondary-color: #f1f0ff;
+  --black-color: #171717;
+  --gray-elements-color: #ebebeb;
+
+
   /* card */
   --body-background-color: #fff;
   --card-background-color: #fff;
