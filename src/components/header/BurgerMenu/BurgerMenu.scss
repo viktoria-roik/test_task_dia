@@ -1,0 +1,67 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+
+.burger-menu {
+  position: absolute;
+  top: 39px;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100vw;
+  // padding-top: 24px;
+
+  background-color: var(--body-background-color);
+
+  z-index: 5;
+
+  @include onTablet {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: block;
+    height: 27px;
+
+    margin-bottom: 16px;
+
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 27px;
+    color: var(--text-secondary-color);
+
+    &.is-active {
+      color: var(--text-main-color);
+      border-bottom: 3px solid var(--text-main-color);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 64px;
+
+    box-shadow: -1px -1px 0px 0px var(--header-box-shadow-color);
+
+    &.is-active {
+      border-bottom: 3px solid var(--text-main-color);
+    }
+  }
+}

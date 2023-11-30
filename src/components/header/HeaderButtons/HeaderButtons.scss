@@ -1,0 +1,54 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+
+.buttons {
+  display: flex;
+
+  @include onTablet {
+    display: none;
+  }
+}
+
+.icon-wrapper {
+  display: none;
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+
+  width: $header-height;
+
+  @include onTablet {
+    display: flex;
+  }
+
+  @include onDesktop {
+    width: $header-desktop-height;
+  }
+
+  &--menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    fill: black;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    border-bottom: 3px solid var(--text-main-color);
+  }
+}
+
+.icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: black;
+
+  &--menu.is-active {
+    display: none;
+  }
+}
