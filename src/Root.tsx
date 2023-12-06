@@ -5,7 +5,6 @@ import { App } from './App';
 import { PageNotFound } from './pages/notfound/PageNotFound';
 import { HomePage } from 'pages/home/HomePage';
 
-
 export const Root = () => (
   <Router>
     <Routes>

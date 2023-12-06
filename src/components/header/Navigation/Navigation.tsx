@@ -13,7 +13,6 @@ const languages = [
   { code: 'en', name: 'ENG' },
   { code: 'fr', name: 'FR' },
   { code: 'pl', name: 'PL' },
-  // More languages
 ];
 
 export const Navigation: React.FC = () => {
@@ -35,68 +34,67 @@ export const Navigation: React.FC = () => {
   return (
     <nav className="nav">
       <button className="nav__category category">Категорії</button>
-        <form className="nav__search-bar search-bar">
-          <input 
-            className="search-bar__input"
-            type="text" 
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button 
-            className="search-bar__icon"
-            onClick={handleSearch}
-          >
-            <SearchIcon />
-          </button>
-        </form>
-        <button className="nav__advert-btn advert-btn">Створити оголошення</button>
+      <form className="nav__search-bar search-bar">
+        <input
+          className="search-bar__input"
+          type="text"
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+        />
+        <button className="search-bar__icon" onClick={handleSearch}>
+          <SearchIcon />
+        </button>
+      </form>
+      <button className="nav__advert-btn advert-btn">
+        Створити оголошення
+      </button>
 
-        <ul className="nav__icons">
-          <li>
-            <Link to="/" className="nav__icon">
-              <MessageIcon />
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="nav__icon">
-              <BuildIcon />
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="nav__icon">
-              <PersonIcon />
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="nav__icon">
-              <BellIcon />
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="nav__icon">
-              <MoreIcon />
-            </Link>
-          </li>
-        </ul>
+      <ul className="nav__icons">
+        <li>
+          <Link to="/" className="nav__icon">
+            <MessageIcon />
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className="nav__icon">
+            <BuildIcon />
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className="nav__icon">
+            <PersonIcon />
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className="nav__icon">
+            <BellIcon />
+          </Link>
+        </li>
+        <li>
+          <Link to="/" className="nav__icon">
+            <MoreIcon />
+          </Link>
+        </li>
+      </ul>
 
-        <div className="nav__lang lang">
-          <select 
-            name="Select Language" 
-            value={selectedLanguage}
-            onChange={handleChangeLanguage}
-            className="lang__select"
-          >
-            {languages.map((language) => (
-              <option 
-                key={language.code}
-                value={language.code}
-                className="lang__option"
-              >
-                {language.name}
-              </option>
-            ))}
-          </select>
-        </div>
-      </nav>
+      <div className="nav__lang lang">
+        <select
+          name="Select Language"
+          value={selectedLanguage}
+          onChange={handleChangeLanguage}
+          className="lang__select"
+        >
+          {languages.map(language => (
+            <option
+              key={language.code}
+              value={language.code}
+              className="lang__option"
+            >
+              {language.name}
+            </option>
+          ))}
+        </select>
+      </div>
+    </nav>
   );
 };

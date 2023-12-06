@@ -1,17 +1,5 @@
 @import './vars';
 
-@mixin onMiniTalet {
-  @media (min-width: 310px) {
-    @content;
-  }
-}
-
-@mixin onPhone-M {
-  @media (min-width: $phone-m-width) {
-    @content;
-  }
-}
-
 @mixin onTablet {
   @media (min-width: $tablet-width) {
     @content;
@@ -30,27 +18,99 @@
   }
 }
 
-@mixin defaultHover {
-  @include onDesktop {
-    transition: color, fill, $transition-duration;
-    &:hover {
-      color: var(--gray-primary-color);
-      fill: var(--gray-primary-color);
-    }
-  }
-}
-
-@mixin buttonHover {
-  @include onDesktop() {
-    transition: box-shadow $transition-duration;
-    &:hover {
-      box-shadow: 0px 3px 13px 0px rgba(23, 32, 49, 0.4);
-    }
-  }
-}
-
-@mixin displayFlexCenter {
+@mixin buttonStylesPurple {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  padding: 10px 15px;
+  border-radius: 35px;
+
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--purple-primary-color);
+
+  border: none;
+  background-color: var(--purple-secondary-color);
+  box-shadow: 0px 5px 6px 0px rgba(45, 33, 54, 0.1);
+
+  cursor: pointer;
+}
+
+@mixin buttonStylesBlack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 208px;
+
+  padding: 15px;
+  border-radius: 35px;
+
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-elements-color);
+
+  border: none;
+  background-color: var(--black-color);
+  box-shadow: 0px 5px 8px 0px rgba(77, 76, 76, 0.4);
+
+  cursor: pointer;
+}
+
+@mixin blockStylesRules {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--gray-text-color);
+  // padding-bottom: 15px;
+  padding: 15px 0;
+  max-width: 630px;
+
+  @include onTablet {
+    padding: 20px 0;
+  }
+}
+
+@mixin titleBlockStyle {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--purple-primary-color);
+
+  @include onTablet {
+    font-size: 19px;
+  }
+}
+
+@mixin contentBlockStyle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+@mixin subtitleBlockStyle {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray-subtitle-color);
+
+  @include onTablet {
+    font-size: 14px;
+  }
+}
+
+@mixin inputBlockStyle {
+  font-family: 'Mulish', sans-serif;
+
+  border: none;
+  color: #262626;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  border-bottom: 2px solid var(--purple-primary-color);
+
+  @include onTablet {
+    font-size: 16px;
+  }
 }

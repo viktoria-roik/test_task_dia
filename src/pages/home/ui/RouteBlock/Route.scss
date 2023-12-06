@@ -1,0 +1,106 @@
+@import '../../../../styles/utils';
+
+.route-block {
+  @include blockStylesRules;
+
+  &__title {
+    @include titleBlockStyle;
+  }
+
+  &__btn {
+    @include buttonStylesPurple;
+    max-width: 200px;
+    font-size: 14px;
+
+    @include onTablet {
+      font-size: 16px;
+      max-width: 215px;
+      // width: 100%;
+    }
+  }
+  @include onTablet {
+    padding-top: 0;
+  }
+
+  @include onDesktop {
+    // grid-area: 1 / 1 / 1;
+  }
+}
+
+.routes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.route {
+  border-radius: 10px;
+  border: 1px solid var(--gray-text-color);
+  padding: 15px;
+  max-width: 630px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--black-secondary-color);
+
+    @include onDesktop {
+      font-size: 16px;
+    }
+  }
+}
+
+.info {
+  @include contentBlockStyle;
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+
+    &__place {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    &__working-time {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+  }
+
+  &-main {
+    @include onTablet {
+      display: grid;
+      grid-template-columns: 1fr 50px 1fr;
+
+      &__date {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      &__place {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      &__working-time {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      &__arrival-time {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+  }
+
+  &__subtitle {
+    @include subtitleBlockStyle;
+  }
+
+  &__input {
+    @include inputBlockStyle;
+
+    &--date {
+      font-family: 'Mulish', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+input[type='time']::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+}
