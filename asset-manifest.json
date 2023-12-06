@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/viktoria-roik/test_task_dia/static/css/main.01fe18d0.css",
+    "main.js": "/viktoria-roik/test_task_dia/static/js/main.b5ca415e.js",
+    "static/media/uz-photo.png": "/viktoria-roik/test_task_dia/static/media/uz-photo.d7f3bbddd9a0ee946380.png",
+    "static/media/logo.svg": "/viktoria-roik/test_task_dia/static/media/logo.d11c9895b0ed069db0a52735f4fc035f.svg",
+    "static/media/more-icon.svg": "/viktoria-roik/test_task_dia/static/media/more-icon.b7b28e5c77830e87da0ebe381e38578e.svg",
+    "static/media/bell-icon.svg": "/viktoria-roik/test_task_dia/static/media/bell-icon.83c2646aae348b41f38ef61fdda443e4.svg",
+    "static/media/person-icon.svg": "/viktoria-roik/test_task_dia/static/media/person-icon.de33526886704550634f150db4675db4.svg",
+    "index.html": "/viktoria-roik/test_task_dia/index.html",
+    "static/media/build-icon.svg": "/viktoria-roik/test_task_dia/static/media/build-icon.1eec98ab74f8c15e493cff4604bc90e3.svg",
+    "static/media/close_icon.svg": "/viktoria-roik/test_task_dia/static/media/close_icon.6a43491b226e60a0f2726ef578fe1864.svg",
+    "static/media/search-icon.svg": "/viktoria-roik/test_task_dia/static/media/search-icon.ae1232bd60e83e30f7b104be8fd0a9d5.svg",
+    "static/media/eye-icon.svg": "/viktoria-roik/test_task_dia/static/media/eye-icon.30628f91bc0836d783405f816732a484.svg",
+    "static/media/message-icon.svg": "/viktoria-roik/test_task_dia/static/media/message-icon.c7b30a6926273e717be286bd9747f11c.svg",
+    "static/media/burger-icon.svg": "/viktoria-roik/test_task_dia/static/media/burger-icon.63ce6c3c04b3a08a2d782384293081e7.svg",
+    "main.01fe18d0.css.map": "/viktoria-roik/test_task_dia/static/css/main.01fe18d0.css.map",
+    "main.b5ca415e.js.map": "/viktoria-roik/test_task_dia/static/js/main.b5ca415e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01fe18d0.css",
+    "static/js/main.b5ca415e.js"
+  ]
+}
