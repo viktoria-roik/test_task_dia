@@ -1,0 +1,108 @@
+@import '../../../../styles/utils';
+
+.pay-options {
+  @include blockStylesRules;
+
+  &__title {
+    @include titleBlockStyle;
+  }
+
+  margin-bottom: 15px;
+
+  @include onDesktop {
+    grid-area: 5 / 1 / 6 / 2;
+
+    border-bottom: none;
+  }
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+
+  @include onTablet {
+    gap: 15px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+    background-color: var(--purple-secondary-color);
+    border-radius: 7px;
+
+    @include onTablet {
+      padding: 10px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__circle {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--gray-for-checkbox);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+
+    @include onTablet {
+      width: 25px;
+      height: 23px;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    // gap: 10px;
+    @include onTablet {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black-color);
+
+    @include onTablet {
+      font-size: 16px;
+    }
+  }
+
+  &__additional-info {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--purple-primary-color);
+  }
+}
+
+.selected .option__circle::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--purple-primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include onTablet {
+    width: 90%;
+    height: 90%;
+  }
+}
